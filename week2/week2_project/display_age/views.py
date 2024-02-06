@@ -22,6 +22,7 @@ def index(request):
         "today": today,
         "name": request.session.get("name"),
         "birthday": birthday,
+        "age": 10
         # "age": calc_age(today, datetime.date(birthday.year, birthday.month, birthday.day))
     })
 
