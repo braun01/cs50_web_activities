@@ -1,6 +1,21 @@
 # CS50 Web Week 1 Activities
 
-## Goal
+## Week 2: Django
+Example solution will be in the `week2` directory.
+
+### Goal
+Make a Django project with two apps, one to display your age, and one to get your age via a form.
+
+To make a new Django project, run `django-admin startproject PROJECT_NAME` in the appropriate directory.
+
+To make a new app, run `python manage.py startapp APP_NAME`.
+
+To start your project, run `python manage.py runserver`.
+
+
+## Week 1: HTML, CSS + SASS, Python & Git
+Starter files are in the `week1` directory
+### Goal
 Make a simple HTML page about yourself. Your page should include the following:
 * Your name
 * Two fun facts
@@ -15,7 +30,7 @@ You should include but are not limited to the following html tags:
 
 In styles/style.scss, write some styles to make your page look a little nicer. **Bonus points** if you use flexbox or boostrap on top of your own styles.
 
-## Where To Start
+#### Where To Start
 1. Fork this repo
 2. Clone your fork to your local machine
     * do so using `git clone https://github.com/braun01/cs50_web_week1.git` (via https) or you can use SSH
