@@ -1,7 +1,7 @@
 # CS50 Web Week 1 Activities
 
 ## Week 2: Django
-Example solution will be in the `week2` directory.
+Example solution can be found in the `week2` directory.
 Slides from section can be found [here](https://docs.google.com/presentation/d/1AN9WcLl3K5C1ymNnMJTX23PZXb0dx6E6t6bL2HC7Gds/edit?usp=sharing).
 
 ### Goal
