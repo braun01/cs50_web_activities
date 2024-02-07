@@ -4,7 +4,7 @@
 Example solution will be in the `week2` directory.
 
 ### Goal
-Make a Django project with two apps, one to display your age, and one to get your age via a form.
+Make a Django project with one sub app that displays your age on one page, and gets your age on another via a form.
 
 To make a new Django project, run `django-admin startproject PROJECT_NAME` in the appropriate directory.
 
@@ -33,6 +33,7 @@ In styles/style.scss, write some styles to make your page look a little nicer. *
 #### Where To Start
 1. Fork this repo
 2. Clone your fork to your local machine
+    * do so using `git clone https://github.com/braun01/cs50_web_week1.git` (via https) or you can use SSH
 3. Write some html
 4. Make a commit
 5. Write some styles
