@@ -2,6 +2,7 @@
 
 ## Week 2: Django
 Example solution will be in the `week2` directory.
+Slides from section can be found [here](https://docs.google.com/presentation/d/1AN9WcLl3K5C1ymNnMJTX23PZXb0dx6E6t6bL2HC7Gds/edit?usp=sharing).
 
 ### Goal
 Make a Django project with one sub app that displays your age on one page, and gets your age on another via a form.
@@ -14,7 +15,8 @@ To start your project, run `python manage.py runserver`.
 
 
 ## Week 1: HTML, CSS + SASS, Python & Git
-Starter files are in the `week1` directory
+Starter files are in the `week1` directory.
+Slides from section can be found [here](https://docs.google.com/presentation/d/1iUx2GvqXVAplir9XyqwtCR2qoVmLpDyDuUumAv5JHU8/edit?usp=sharing).
 ### Goal
 Make a simple HTML page about yourself. Your page should include the following:
 * Your name
