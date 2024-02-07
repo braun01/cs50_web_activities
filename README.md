@@ -4,7 +4,7 @@
 Example solution will be in the `week2` directory.
 
 ### Goal
-Make a Django project with two apps, one to display your age, and one to get your age via a form.
+Make a Django project with one sub app that displays your age on one page, and gets your age on another via a form.
 
 To make a new Django project, run `django-admin startproject PROJECT_NAME` in the appropriate directory.
 
