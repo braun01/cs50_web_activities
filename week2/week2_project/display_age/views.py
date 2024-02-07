@@ -4,7 +4,7 @@ from django.urls import reverse
 from django import forms
 import datetime
 
-# import helpers.calc_age as calc_age
+from . import helpers
 
 class AgeForm(forms.Form):
     name = forms.CharField(label="Name:")
@@ -18,18 +18,22 @@ class AgeForm(forms.Form):
 def index(request):
     today = datetime.datetime.today()
     birthday = request.session.get("birthday")
+
     return render(request, "display_age/index.html", {
         "today": today,
         "name": request.session.get("name"),
         "birthday": birthday,
-        "age": 10
-        # "age": calc_age(today, datetime.date(birthday.year, birthday.month, birthday.day))
+        "age": helpers.calc_age(today, datetime.date(birthday["year"], birthday["month"], birthday["day"])) if birthday else None
     })
 
 def get_age(request):
     if request.method == "POST":
         # grab the form data the user submitted
         form = AgeForm(request.POST)
+
+        # Curious about your form? print it!
+        # print(form)
+
         if form.is_valid():
             # grab the name and date from the cleaned data
             # make sure to run `python manage.py migrate` from the project dir before trying to use the session variable

@@ -4,7 +4,7 @@
     <div>
         <h1>Hello!</h1>
         <p>Today's date is {{ today }}</p>
-        {% if name and birthday and (age != None) %}
+        {% if name and birthday and age %}
             <p>{{name}} was born on {{ birthday.day }}-{{ birthday.month }}-{{birthday.year}}</p>
             <p>You are {{ age }} years old!</p>
         {% else %}
