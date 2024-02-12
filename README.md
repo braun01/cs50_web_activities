@@ -13,6 +13,8 @@ To make a new app, run `python manage.py startapp APP_NAME`.
 
 To start your project, run `python manage.py runserver`.
 
+**Note:** You might have to install the `dateutil` Python module.
+
 
 ## Week 1: HTML, CSS + SASS, Python & Git
 Starter files are in the `week1` directory.
