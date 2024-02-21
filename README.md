@@ -1,5 +1,20 @@
 # CS50 Web Week 1 Activities
 
+## Week 3: SQL, Models, & Migrations
+Example solution can be found in the `week3` directory.
+Slides from section can be found [here](https://docs.google.com/presentation/d/1i7-8WdxeY-RL-hDLCwPLvWFSDoAxuNjwof1ucM_N5TE/edit?usp=sharing).
+
+### Goal:
+Create a simple website to view students and their enrolled classses. Bonus if you add the ability to enroll a student. 
+
+You should define both a Student and a Class model. These models should be related to each other in some way -- consider which of ForeignKey, many-to-many, or One-to-One relationships are most appropriate. (*Tip*: There is an example definition of a Student model in the slides!)
+
+Remember your **migration** workflow:
+1. Define models in the app's model.py
+2. run `python manage.py makemigrations` from the project directory
+3. run `python manage.py migrate` from the project directory
+
+
 ## Week 2: Django
 Example solution can be found in the `week2` directory.
 Slides from section can be found [here](https://docs.google.com/presentation/d/1AN9WcLl3K5C1ymNnMJTX23PZXb0dx6E6t6bL2HC7Gds/edit?usp=sharing).
