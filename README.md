@@ -52,7 +52,7 @@ In styles/style.scss, write some styles to make your page look a little nicer. *
 #### Where To Start
 1. Fork this repo
 2. Clone a copy of this repo to your local machine
-    * do so using `git clone https://github.com/braun01/cs50_web_week1.git` (via https) or you can use SSH
+    * do so using `git clone https://github.com/braun01/cs50_web_activities.git` (via https) or you can use SSH
 3. Write some html
 4. Make a commit
 5. Write some styles
