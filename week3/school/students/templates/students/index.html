@@ -3,5 +3,36 @@
 {% block body %}
 
     <h1>All Students</h1>
+    <h3>Total: {{total}}</h3>
+
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Student ID</th>
+                <th>Name</th>
+                <th>Age</th>
+                <th>Classes</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for student in students %}
+                <tr>
+                    <td>{{student.id}}</td>
+                    <td>{{student.name}}</td>
+                    <td>{{student.age}}</td>
+                    <td>
+                        <ul>
+                            <!-- Django templates hate parens -->
+                            {% for class in student.classes.all %}
+                                <li>{{class}}</li>
+                            {% empty %}
+                                <a href="{% url 'students:enroll' student.id %}">Enroll Student</a>
+                            {% endfor %}
+                        </ul>
+                    </td>
+                </tr> 
+            {% endfor %}
+        </tbody>
+    </table>
 
 {% endblock %}

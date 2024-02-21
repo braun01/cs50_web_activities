@@ -1,0 +1,16 @@
+{% extends "students/layout.html" %}
+
+{% block body %}
+    <h1>Enrolling Student ID: {{ student_id }} </h1>
+
+    <form action="{% url 'students:enroll' student_id %}" method="post">
+        {% csrf_token %}
+        {% for class in classes %}
+            <input type="checkbox" id="{{class.id}}" name="classes" value="{{class.id}}">
+            <label for="{{class.id}}">{{class}}</label>
+            <br>
+        {% endfor %}
+        <input type="submit" value="Submit">
+    </form>
+
+{% endblock%}
