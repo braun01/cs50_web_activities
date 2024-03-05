@@ -1,4 +1,4 @@
-# CS50 Web Week 1 Activities
+# CS50 Web Activities
 
 ## Week 4: Javascript
 Example solution will be posted after section in the `week4/` directory.
