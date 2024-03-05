@@ -2,7 +2,7 @@
 
 ## Week 4: Javascript
 Example solution will be posted after section in the `week4/` directory.
-Section slides can be found [here](LINK).
+Section slides can be found [here](https://docs.google.com/presentation/d/1Ekawt2oZqhu-2gc5Lv5Bm-x0zohPqI9SAF2vkKokOF0/edit?usp=sharing).
 
 ### Goal:
 Create a Javascript based page that queries our app's API for pets available for adoption, and then dynamically displays information about the pets.
