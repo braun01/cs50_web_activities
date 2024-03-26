@@ -3,19 +3,7 @@ const correctCards = [];
 
 function Card({ question, answer}) {
     const handleCardClick = (event) => {
-        // currentTarget gives you the element that actually has the event bound to it
-        const front = event.currentTarget.querySelector(".front");
-        const back = event.currentTarget.querySelector(".back");
-
-        // switch up the visibility
-        // BUG: slight bug in that it takes two clicks for the effect to take
-        if (front.style.display === "block") {
-            front.style.display = "none";
-            back.style.display = "block";
-        } else {
-            front.style.display = "block";
-            back.style.display = "none";
-        }
+        // TODO: hide the "front" text and show the "back" text
     }
 
     return (
@@ -64,14 +52,11 @@ function Deck() {
         currentCard: 0
     });
 
+    // stay in bounds
     if (state.currentCard >= 0 && state.currentCard < state.cards.length){
+        // TODO
         return (
-            <div>
-                Viewing card {state.currentCard + 1} of {state.cards.length}
-                <Card question={state.cards[state.currentCard].question} answer={state.cards[state.currentCard].answer} />
-                <button class="btn btn-success" data-button-type="correct" onClick={handleClick}>Correct</button>
-                <button class="btn btn-danger" data-button-type="incorrect" onClick={handleClick}>Incorrect</button>
-            </div>
+            <div>TODO: render a deck of cards here and some buttons</div>
         )
     } else {
         return (
@@ -82,29 +67,9 @@ function Deck() {
     }
 
     function handleClick(event) {
-        let wasCorrect = false;
-        if (event.target.dataset.buttonType === "correct") {
-            wasCorrect = true;
-            correctCards.push(state.cards[state.currentCard]);
-            console.log("just pushed correct", correctCards);
-        } else {
-            incorrectCards.push(state.cards[state.currentCard]);
-        }
-
-        // update the state by incrementing the current card and tracking correctness
-        // we use map here to return a new array because React doesn't like you mutating arrays
-        setState({
-            cards: state.cards.map((card, index) => {
-                if (index === state.currentCard) {
-                    return {...card, gotCorrect: wasCorrect}
-                }
-
-                return card
-            }),
-            currentCard: state.currentCard + 1,
-        });
-
-        renderSeenCards();
+        // TODO: update state appropriately depending on the button clicked
+        // push the card into teh correctponding global correct/incorrectCards arrays
+        // render the new card arrays
     }
 }
 
@@ -113,21 +78,14 @@ function renderSeenCards() {
     ReactDOM.render(<ul>{incorrectComponents}</ul>, document.getElementById("incorrect-div"));
     
     const correctComponents = correctCards.map(card => <Card question={card.question} answer={card.answer}/>)
-    ReactDOM.render(<ul>{correctComponents}</ul>, document.getElementById("correct-div"));
-
-
-}
+    ReactDOM.render(<ul>{correctComponents}</ul>, document.getElementById("correct-div"));}
 
 
 
 if (document.readyState !== "loading"){
     console.log("document already loaded");
     ReactDOM.render(<Deck />, document.getElementById("card-start-div"));
-    
-
-    
-}
-else {
+} else {
     document.addEventListener("DOMContentLoaded", () => {
         ReactDOM.render(<Deck />, document.getElementById("card-start-div"));
     });
