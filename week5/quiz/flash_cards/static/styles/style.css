@@ -1,0 +1,38 @@
+h1 {
+    color: blue;
+}
+
+button {
+    margin: 5px;
+}
+
+.card-ab {
+    border-radius: 20px;
+    border-width: 2px;
+    border-style: solid;
+    border-color: grey;
+    padding: 10px;
+    margin: 5px;
+    width: 150px;
+    height: 170px;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.card-ab:hover {
+    background-color: lightblue;
+}
+
+.front {
+    font-weight: bold;
+    font-size: larger;
+    display: block;
+
+}
+
+.back {
+    display: none;
+}
