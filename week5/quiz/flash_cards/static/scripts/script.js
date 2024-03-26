@@ -54,7 +54,7 @@ function Deck() {
 
     // stay in bounds
     if (state.currentCard >= 0 && state.currentCard < state.cards.length){
-        // TODO
+        // TODO: render a deck of cards here and some buttons
         return (
             <div>TODO: render a deck of cards here and some buttons</div>
         )
