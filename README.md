@@ -1,5 +1,24 @@
 # CS50 Web Activities
 
+## Week 5: User Experience/Interaction and React
+Example solution to the React activity will be posted after section in the `week5` directory. Code for the CSS animation activity is already available in the same directory. 
+Section slides can be found [here](https://docs.google.com/presentation/d/1oCrXw_t4TP7uCuEjLe9wMPC5tXm0hg0Cm1ossaEiOrQ/edit?usp=sharing).
+
+### Goal:
+Using React, implement a Quizzlet Lite app that lets a user view a deck of hardcoded flash cards. The user should be able to click on the cards to view the opposite side of the card. The user should also be able to see the previously answered cards.
+
+The Django app has already been fully configured. Although this activity uses hardcoded flash cards, you could also imagine writing an API to pull card info out of a model.
+
+#### Where to start:
+1. `git pull` to pick up any updates, or clone the repo if you have not already.
+2. Take a read through `templates/index.html`, and `static/styles/style.css` (if you wish). Note that `index.html` is pretty empty.
+3. Open up `static/scripts/script.js` and read through the existing skeleton code.
+4. Start by trying to render the first card out of the Deck.
+5. Add buttons and event handlers to advance the cards.
+6. Update the Card component to respond to user clicks.
+7. Update your button handlers to display previously viewed cards in their respective divs using the `renderSeenCards()` function.
+
+
 ## Week 4: Javascript
 Example solution will be posted after section in the `week4/` directory.
 Section slides can be found [here](https://docs.google.com/presentation/d/1Ekawt2oZqhu-2gc5Lv5Bm-x0zohPqI9SAF2vkKokOF0/edit?usp=sharing).
