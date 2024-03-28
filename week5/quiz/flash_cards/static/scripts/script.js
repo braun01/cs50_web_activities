@@ -3,18 +3,18 @@ const correctCards = [];
 
 function Card({ question, answer}) {
     const handleCardClick = (event) => {
-        // TODO: hide the "front" text and show the "back" text
+        // PREVIOUS TODO: hide the "front" text and show the "back" text
         // currentTarget gives you the element that actually has the event bound to it
         const front = event.currentTarget.querySelector(".front");
         const back = event.currentTarget.querySelector(".back");
 
         // switch up the visibility
-        if (front.style.display === "block") {
-            front.style.display = "none";
-            back.style.display = "block";
-        } else {
+        if (front.style.display === "none") {
             front.style.display = "block";
             back.style.display = "none";
+        } else {
+            front.style.display = "none";
+            back.style.display = "block";
         }
     }
 
@@ -23,7 +23,7 @@ function Card({ question, answer}) {
             <div class="front">{question}</div>
             <div class="back">{answer}</div>
         </div>
-    )
+    );
 
 }
 
@@ -66,7 +66,7 @@ function Deck() {
 
     // stay in bounds
     if (state.currentCard >= 0 && state.currentCard < state.cards.length){
-        // TODO: render a deck of cards here and some buttons
+        // PREVIOUS TODO: render a deck of cards here and some buttons
         return (
             <div>
                 Viewing card {state.currentCard + 1} of {state.cards.length}
@@ -74,18 +74,18 @@ function Deck() {
                 <button class="btn btn-success" data-button-type="correct" onClick={handleClick}>Correct</button>
                 <button class="btn btn-danger" data-button-type="incorrect" onClick={handleClick}>Incorrect</button>
             </div>
-        )
+        );
     } else {
         return (
             <div>
                 Unable to render card #{state.currentCard + 1} or no more cards to render
             </div>
-        )
+        );
     }
 
     function handleClick(event) {
-        // TODO: update state appropriately depending on the button clicked
-        // push the card into teh correctponding global correct/incorrectCards arrays
+        // PREVIOUS TODO: update state appropriately depending on the button clicked
+        // push the card into the correctponding global correct/incorrectCards arrays
         // render the new card arrays
         let wasCorrect = false;
         if (event.target.dataset.buttonType === "correct") {
@@ -100,10 +100,10 @@ function Deck() {
         setState({
             cards: state.cards.map((card, index) => {
                 if (index === state.currentCard) {
-                    return {...card, gotCorrect: wasCorrect}
+                    return {...card, gotCorrect: wasCorrect};
                 }
 
-                return card
+                return card;
             }),
             currentCard: state.currentCard + 1,
         });
@@ -113,10 +113,10 @@ function Deck() {
 }
 
 function renderSeenCards() {
-    const incorrectComponents = incorrectCards.map(card => <Card question={card.question} answer={card.answer}/>)
+    const incorrectComponents = incorrectCards.map(card => <Card question={card.question} answer={card.answer}/>);
     ReactDOM.render(<ul>{incorrectComponents}</ul>, document.getElementById("incorrect-div"));
     
-    const correctComponents = correctCards.map(card => <Card question={card.question} answer={card.answer}/>)
+    const correctComponents = correctCards.map(card => <Card question={card.question} answer={card.answer}/>);
     ReactDOM.render(<ul>{correctComponents}</ul>, document.getElementById("correct-div"));}
 
 
