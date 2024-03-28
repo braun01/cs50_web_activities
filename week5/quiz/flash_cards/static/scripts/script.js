@@ -8,7 +8,6 @@ function Card({ question, answer}) {
         const back = event.currentTarget.querySelector(".back");
 
         // switch up the visibility
-        // BUG: slight bug in that it takes two clicks for the effect to take
         if (front.style.display === "block") {
             front.style.display = "none";
             back.style.display = "block";
@@ -86,7 +85,6 @@ function Deck() {
         if (event.target.dataset.buttonType === "correct") {
             wasCorrect = true;
             correctCards.push(state.cards[state.currentCard]);
-            console.log("just pushed correct", correctCards);
         } else {
             incorrectCards.push(state.cards[state.currentCard]);
         }
@@ -121,11 +119,7 @@ function renderSeenCards() {
 
 
 if (document.readyState !== "loading"){
-    console.log("document already loaded");
     ReactDOM.render(<Deck />, document.getElementById("card-start-div"));
-    
-
-    
 }
 else {
     document.addEventListener("DOMContentLoaded", () => {
