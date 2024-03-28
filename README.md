@@ -19,10 +19,10 @@ Using React, implement a Quizzlet Lite app that lets a user view a deck of hardc
 The Django app has already been fully configured. Although this activity uses hardcoded flash cards, you could also imagine writing an API to pull card info out of a model.
 
 
-#### Where to start:
+#### Where to start (if implementing `/example1`):
 1. `git pull` to pick up any updates, or clone the repo if you have not already.
-2. Take a read through `templates/index.html`, and `static/styles/style.css` (if you wish). Note that `index.html` is pretty empty.
-3. Open up `static/scripts/script.js` and read through the existing skeleton code.
+2. Take a read through `templates/index1.html`, and `static/styles/style.css` (if you wish). Note that `index1.html` is pretty empty.
+3. Open up `static/scripts/script1.js` and read through the existing skeleton code.
 4. Start by trying to render the first card out of the Deck.
 5. Add buttons and event handlers to advance the cards.
 6. Update the Card component to respond to user clicks.
