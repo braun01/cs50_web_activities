@@ -68,7 +68,12 @@ function Deck() {
     if (state.currentCard >= 0 && state.currentCard < state.cards.length){
         // TODO: render a deck of cards here and some buttons
         return (
-            <div>TODO: render a deck of cards here and some buttons</div>
+            <div>
+                Viewing card {state.currentCard + 1} of {state.cards.length}
+                <Card question={state.cards[state.currentCard].question} answer={state.cards[state.currentCard].answer} />
+                <button class="btn btn-success" data-button-type="correct" onClick={handleClick}>Correct</button>
+                <button class="btn btn-danger" data-button-type="incorrect" onClick={handleClick}>Incorrect</button>
+            </div>
         )
     } else {
         return (
