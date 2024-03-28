@@ -4,7 +4,7 @@
 Example solution to the React activity will be posted after section in the `week5` directory. Code for the CSS animation activity is already available in the same directory. 
 Section slides can be found [here](https://docs.google.com/presentation/d/1oCrXw_t4TP7uCuEjLe9wMPC5tXm0hg0Cm1ossaEiOrQ/edit?usp=sharing).
 
-#### Note about the solution: 
+#### Note about the React activity solution: 
 Within the solution Django app, there are two approaches to this problem, each its own Django route. Functionally, they are equivalent, but the design of the approaches differ.
 
 `/example1` (and corresponding files `index1.html` and `script1.js`) is the approach we reviewed together in section. Although it works, from a React design perspective, it has room for improvement, but served as an initial foray. 
