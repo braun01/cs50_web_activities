@@ -21,7 +21,7 @@ The Django app has already been fully configured. Although this activity uses ha
 
 #### Where to start (if implementing `/example1`):
 1. `git pull` to pick up any updates, or clone the repo if you have not already.
-2. Take a read through `templates/index1.html`, and `static/styles/style.css` (if you wish). Note that `index1.html` is pretty empty.
+2. Take a read through `templates/flash_cards/index1.html`, and `static/styles/style.css` (if you wish). Note that `index1.html` is pretty empty.
 3. Open up `static/scripts/script1.js` and read through the existing skeleton code.
 4. Start by trying to render the first card out of the Deck.
 5. Add buttons and event handlers to advance the cards.
