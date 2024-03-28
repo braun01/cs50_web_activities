@@ -5,18 +5,26 @@ function Card({ question, answer}) {
     const handleCardClick = (event) => {
         // PREVIOUS TODO: hide the "front" text and show the "back" text
         // currentTarget gives you the element that actually has the event bound to it
-        const front = event.currentTarget.querySelector(".front");
-        const back = event.currentTarget.querySelector(".back");
+        // const front = event.currentTarget.querySelector(".front");
+        // const back = event.currentTarget.querySelector(".back");
 
-        // switch up the visibility
-        if (front.style.display === "none") {
-            front.style.display = "block";
-            back.style.display = "none";
-        } else {
-            front.style.display = "none";
-            back.style.display = "block";
-        }
-    }
+        // // switch up the visibility
+        // if (front.style.display === "none") {
+        //     front.style.display = "block";
+        //     back.style.display = "none";
+        // } else {
+        //     front.style.display = "none";
+        //     back.style.display = "block";
+        // }
+
+        // OR you can animate the card flip using the below instead
+        event.currentTarget.classList.add("card-flip");
+        event.currentTarget.onanimationend = function() {
+            // "this" is still the card div
+            this.classList.remove("card-flip")
+        };
+
+    };
 
     return (
         <div onClick={handleCardClick} class="card-ab">
