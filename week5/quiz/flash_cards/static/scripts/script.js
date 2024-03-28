@@ -4,6 +4,18 @@ const correctCards = [];
 function Card({ question, answer}) {
     const handleCardClick = (event) => {
         // TODO: hide the "front" text and show the "back" text
+        // currentTarget gives you the element that actually has the event bound to it
+        const front = event.currentTarget.querySelector(".front");
+        const back = event.currentTarget.querySelector(".back");
+
+        // switch up the visibility
+        if (front.style.display === "block") {
+            front.style.display = "none";
+            back.style.display = "block";
+        } else {
+            front.style.display = "block";
+            back.style.display = "none";
+        }
     }
 
     return (
@@ -70,6 +82,28 @@ function Deck() {
         // TODO: update state appropriately depending on the button clicked
         // push the card into teh correctponding global correct/incorrectCards arrays
         // render the new card arrays
+        let wasCorrect = false;
+        if (event.target.dataset.buttonType === "correct") {
+            wasCorrect = true;
+            correctCards.push(state.cards[state.currentCard]);
+        } else {
+            incorrectCards.push(state.cards[state.currentCard]);
+        }
+
+        // update the state by incrementing the current card and tracking correctness
+        // we use map here to return a new array because React doesn't like you mutating arrays
+        setState({
+            cards: state.cards.map((card, index) => {
+                if (index === state.currentCard) {
+                    return {...card, gotCorrect: wasCorrect}
+                }
+
+                return card
+            }),
+            currentCard: state.currentCard + 1,
+        });
+
+        renderSeenCards();
     }
 }
 
@@ -83,7 +117,6 @@ function renderSeenCards() {
 
 
 if (document.readyState !== "loading"){
-    console.log("document already loaded");
     ReactDOM.render(<Deck />, document.getElementById("card-start-div"));
 } else {
     document.addEventListener("DOMContentLoaded", () => {
