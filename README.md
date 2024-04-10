@@ -11,10 +11,10 @@ You've written a snazzy binary search, but now you need to determine if it actua
 #### Selenium Testing
 Your friends sent you a Javascript based guessing game, but you're a busy individual and don't have time to sit around taking thousands of guesses. Write a Selenium script instead to quickly discover what the number is. You might find these Selenium intro [docs](https://www.selenium.dev/documentation/webdriver/getting_started/first_script/) helpful.
 
-Make sure you have installed both Selenium (`pip install selenium`) and the ChromeDriver (or browser of choice driver) via `pip install chromedriver-py`.
+Make sure you have installed both Selenium via `pip install selenium` and the ChromeDriver (or browser of choice driver) via `pip install chromedriver-py`.
 
 #### Django Testing
-Download the [staff solution](https://vault.cs50.io/f37ab9cd-9ab5-4ebc-9971-f193defd1037) to the Commerce project. In `auctions/tests.py`, write a set of tests to ensure that the app is working as intended.
+Download the [staff solution](https://vault.cs50.io/f37ab9cd-9ab5-4ebc-9971-f193defd1037) to the Commerce project. In `auctions/tests.py`, write a set of tests to ensure that the app is working as intended. Solution test code is in `week6/solution/examples/commerce_example/`
 
 
 ## Week 5: User Experience/Interaction and React
