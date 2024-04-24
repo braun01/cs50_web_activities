@@ -1,5 +1,11 @@
 # CS50 Web Activities
 
+## Week 7: Scalability & Security
+No code exercises this week. 
+Section slides can be found [here](https://docs.google.com/presentation/d/1DyT7e0cvB0AHDqg9PuySIj6DzDkWDeSRJnfJX55CoGA/edit?usp=sharing).
+
+Thanks everyone for a great course!
+
 ## Week 6: Testing & CI/CD
 Example solutions can be found in the `week6/solution` directory. Note that only the example tests for the Commerce project will be posted (rather than the whole solution to the project).
 Section slides can be found [here](https://docs.google.com/presentation/d/1lqAw20kUo69YS0Xq4INHseR6mreqWVpMJqQ-QQIVzKc/edit?usp=sharing).
